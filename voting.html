@@ -28,6 +28,15 @@
             padding: 10px;
             margin: 10px;
         }
+        .submit{
+            border-radius: 5px;
+            color: rgb(0, 19, 185);
+            font-weight: 600;
+            font-style: italic;
+        }
+        .submit:hover {
+            color: rgb(0, 19, 185);
+            background-color: #ff8c00;
     </style>
 </head>
 <body>
@@ -36,7 +45,7 @@
         <label for="age">Age:</label>
         <input type="number" id="age" name="age" required>
         <br>
-        <input type="submit" value="Check Eligibility">
+        <input type="submit" class = "submit" value="Check Eligibility">
     
     </form>
     <h2 id="result"></h2>
