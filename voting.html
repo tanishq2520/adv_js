@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter Eligibility Checker</title>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+        }
+        body {
+            font-style: italic;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            border:5px solid rgb(56, 147, 145);
+            max-width: 700px;
+            background: rgb(107, 88, 116);
+            color:rgb(0, 0, 0);
+            border-radius: 10px;
+        }
+        img{
+            background-size: cover;
+            height: 400px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Voter Eligibility Checker</h1>
+    <form id="voterForm">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+        <br>
+        <input type="submit" value="Check Eligibility">
+    
+    </form>
+    <h2 id="result"></h2>
+    <img src="img/vote.webp" alt="">
+   <script>
+        const form = document.getElementById('voterForm');
+        const result = document.getElementById('result');
+        
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const age = parseInt(document.getElementById('age').value);
+
+            if (age >= 18) {
+                result.textContent = 'you can vote!! ';
+            } else {
+                result.textContent = 'you cannnot vote';
+            }
+        });
+    </script>
+</body>
+</html>
